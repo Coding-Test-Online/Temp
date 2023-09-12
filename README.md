@@ -15,3 +15,4 @@ ex) yukeon/1주차/055-jump-game/055-jump-game.java
 ### 6. PR을 더이상 수정하지 않는다면 `automerge` 라벨 적용
 ### 7. 자동 merge
 
+
