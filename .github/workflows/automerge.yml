@@ -1,16 +1,16 @@
 name: automerge
+
 on:
-  pull_request:
-    types:
-      - labeled
+  pull_request_target:
+    branches:
+      - main
 
 jobs:
-  automerge:
+  merge-me:
+    name: Merge me!
     runs-on: ubuntu-latest
     steps:
-      - id: automerge
-        name: automerge
-        uses: "pascalgn/automerge-action@v0.15.6"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_LABELS: ""
+      - name: automerge
+        uses: ridedott/merge-me-action@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
