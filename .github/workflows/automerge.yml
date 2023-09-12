@@ -1,17 +1,20 @@
-name: automerge
+name: automerge check
 
 on:
-  pull_request_target:
-    branches:
-      - main
+  pull_request:
+    types:
+      - labeled
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
-  merge-me:
-    permissions: write-all
-    name: Merge me!
+  automerge:
     runs-on: ubuntu-latest
     steps:
       - name: automerge
-        uses: ridedott/merge-me-action@v2
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: "pascalgn/automerge-action@v0.8.3"
+        env:
+          GITHUB_TOKEN: "${{ github.token }}"
+          MERGE_FORKS: "true"
