@@ -1,13 +1,8 @@
-name: automerge check
-
+name: automerge
 on:
-  pull_request_target:
-    types:
-      - labeled
-
-permissions:
-  contents: read
-  pull-requests: write
+  pull_request:
+    branches: 
+    - main
 
 jobs:
   automerge:
@@ -17,4 +12,4 @@ jobs:
         uses: "pascalgn/automerge-action@v0.8.3"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_FORKS: "true"
+          MERGE_LABELS: ""
