@@ -10,7 +10,7 @@ ex) yukeon/1주차/055-jump-game/055-jump-game.java
 ### 4. 문제를 다 풀면 PR 작성
 ### 5. PR 양식 : `{주차}_{이름}`
 ```java
-ex) yukeon/1주차/055-jump-game/055-jump-game.java
+ex) 1주차_유건
 ```
 ### 6. PR을 더이상 수정하지 않는다면 `automerge` 라벨 적용
 ### 7. 자동 merge
