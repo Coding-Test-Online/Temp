@@ -1,21 +1,18 @@
 class Solution {
     public void rotate(int[] nums, int k) {
+        int[] tmp = new int[nums.length];
 
-        int len = nums.length;
-        k = k%len;
+        for (int i = 0; i < tmp.length; i++) {
+            tmp[i] = nums[(i + k) % nums.length];
+        }
 
-        //2. reverse 이용
-        reverse(nums,0,len-1); //step1 전체 reverse    [7,6,5,4,3,2,1]
-        reverse(nums,0,k-1);   //step2 로테이션 숫자들 reverse [ 5,6,7,4,3,2,1 ]
-        reverse(nums,k,len-1); //step3 나머지 숫자들 reverse [ 5,6,7,1,2,3,4 ]
-
-    }
-
-    public void reverse(int[] nums, int start, int end){
-        while(start < end){
-            int temp = nums[start];
-            nums[start++] = nums[end];
-            nums[end--] = temp;
+        for (int i = 0; i < tmp.length; i++) {
+            nums[i] = tmp[i];
         }
     }
+
+    public static void main(String[] args) {
+        Solution t = new Solution();
+        System.out.println(t.solution());
+     }
 }

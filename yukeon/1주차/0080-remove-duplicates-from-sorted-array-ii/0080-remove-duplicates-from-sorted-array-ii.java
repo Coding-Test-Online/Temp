@@ -1,10 +1,19 @@
+
+/**
+ * 1번 풀이
+ * 시간 복잡도 : O(n)
+ */
 class Solution {
-    public int removeDuplicates(int[] nums) {
-        int count = 0;
+    public void rotate(int[] nums, int k) {
+        int[] tmp = new int[nums.length];
         
-        for (int i : nums) {
-            if (count < 2 || i > nums[count - 2]) nums[count++] = i;
+
+        for (int i = 0; i < tmp.length; i++) {
+            tmp[(i + k) % nums.length] = nums[i];
         }
-        return count;
+
+        for (int i = 0; i < tmp.length; i++) {
+            nums[i] = tmp[i];
+        }
     }
 }
