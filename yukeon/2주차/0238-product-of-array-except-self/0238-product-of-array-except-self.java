@@ -16,3 +16,8 @@ class Solution {
         return ans;
     }
 }
+
+/**
+ * nums와 동일한 크기의 배열 선언
+ * 
+ */
