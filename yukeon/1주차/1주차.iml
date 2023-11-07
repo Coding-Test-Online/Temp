@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/0026-remove-duplicates-from-sorted-array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0027-remove-element" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0055-jump-game" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0080-remove-duplicates-from-sorted-array-ii" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0088-merge-sorted-array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0121-best-time-to-buy-and-sell-stock" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0122-best-time-to-buy-and-sell-stock-II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0169-majority-element" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0189-rotate-array" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
