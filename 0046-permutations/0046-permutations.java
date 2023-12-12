@@ -1,22 +1,25 @@
 class Solution {
+    List<List<Integer>> answer;
+    int[] nums;
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> answer = new ArrayList<>();
-        dfs(answer, nums, new ArrayList<>());
+        this.answer = new ArrayList<>();
+        this.nums = nums;
+        
+        dfs(new ArrayList<>());
         return answer;
     }
     
-    private void dfs(List<List<Integer>> answer, int[] nums, List<Integer> cur) {
+    private void dfs(List<Integer> cur) {
         if (cur.size() == nums.length) {
             answer.add(new ArrayList<>(cur));
             return;
         }
 
         for (int i = 0; i < nums.length; i++) {
-            int num = nums[i];
-            if (!cur.contains(num)) {
-                cur.add(num);
-                dfs(answer, nums, cur);
-                cur.remove((Integer) num);
+            if (!cur.contains(nums[i])) {
+                cur.add(nums[i]);
+                dfs(cur);
+                cur.remove((Integer) nums[i]);
             }
         }
     }
